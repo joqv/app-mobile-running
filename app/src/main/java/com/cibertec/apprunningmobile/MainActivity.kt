@@ -15,13 +15,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        
+
         val btnIrDetalles = findViewById<Button>(R.id.irDetalles)
 
         btnIrDetalles.setOnClickListener {
 
-            val intent2 = Intent(this,detalles::class.java)
+            val intent2 = Intent(this, detalles::class.java)
             startActivity(intent2)
 
         }
     }
+}
