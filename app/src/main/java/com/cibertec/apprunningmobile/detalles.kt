@@ -1,6 +1,8 @@
 package com.cibertec.apprunningmobile
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -11,10 +13,15 @@ class detalles : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_detalles)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        val btnVolverDetallesMenu = findViewById<Button>(R.id.volverDetallesMenu)
+
+        btnVolverDetallesMenu.setOnClickListener {
+
+            val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+
+        }
+
         }
     }
-}
