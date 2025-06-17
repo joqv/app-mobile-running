@@ -10,19 +10,18 @@ import android.content.Intent
 import com.cibertec.apprunningmobile.R.id.irDetalles
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-
+        
         val btnIrDetalles = findViewById<Button>(R.id.irDetalles)
 
         btnIrDetalles.setOnClickListener {
 
             val intent2 = Intent(this,detalles::class.java)
             startActivity(intent2)
-
-        }
 
         }
     }
