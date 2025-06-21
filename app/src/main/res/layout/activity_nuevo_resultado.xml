@@ -31,7 +31,7 @@
     <EditText
         android:id="@+id/etNuevoNombreResultado"
         android:layout_width="276dp"
-        android:layout_height="43dp"
+        android:layout_height="48dp"
         android:layout_marginStart="60dp"
         android:layout_marginTop="30dp"
         android:ems="10"
@@ -58,19 +58,19 @@
         android:layout_marginTop="28dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Name"
+        android:hint="10"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <EditText
         android:id="@+id/etNuevoTiempo"
         android:layout_width="280dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:layout_marginStart="60dp"
         android:layout_marginTop="28dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Name"
+        android:hint="12"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
@@ -90,39 +90,49 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="30dp"
-        android:text="Velocidad (Km/min)"
+        android:text="Velocidad (Km/h)"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNuevoTiempo" />
 
     <EditText
         android:id="@+id/etNuevaVelocidad"
         android:layout_width="276dp"
-        android:layout_height="46dp"
+        android:layout_height="48dp"
         android:layout_marginStart="60dp"
         android:layout_marginTop="30dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Name"
+        android:hint="10"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnGuardarResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
         android:layout_marginTop="40dp"
         android:text="Guardar"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNuevaVelocidad" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnCalcularVelocidad1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:text="Calcular"
+        android:text="CalcularVelocidad"
         app:layout_constraintStart_toEndOf="@+id/textView12"
         app:layout_constraintTop_toBottomOf="@+id/etNuevoTiempo" />
+
+    <Button
+        android:id="@+id/btnVolverListaResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="40dp"
+        android:text="Volver"
+        app:layout_constraintStart_toEndOf="@+id/btnGuardarResultado"
+        app:layout_constraintTop_toBottomOf="@+id/etNuevaVelocidad" />
 </androidx.constraintlayout.widget.ConstraintLayout>

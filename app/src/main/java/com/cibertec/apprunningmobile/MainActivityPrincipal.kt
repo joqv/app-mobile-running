@@ -27,11 +27,11 @@ class MainActivityPrincipal : AppCompatActivity() {
         // Fin código Jose para desarrollo
 
         // codigo Omar
-        val btnResultados = findViewById<Button>(R.id.buttonResultadoEventoDesarrollo)
-        btnResultados.setOnClickListener {
-            val intent = Intent(this, NuevoResultadoActivity::class.java)
-            startActivity(intent)
-        }
+      //  val btnResultados = findViewById<Button>(R.id.buttonResultadoEventoDesarrollo)
+       // btnResultados.setOnClickListener {
+         //   val intent = Intent(this, NuevoResultadoActivity::class.java)
+         //   startActivity(intent)
+        //}
 
 
         //fin codigo Omar
