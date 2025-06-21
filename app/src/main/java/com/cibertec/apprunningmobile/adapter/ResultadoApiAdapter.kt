@@ -22,7 +22,7 @@ class ResultadoApiAdapter(private val lista: List<ResultadoApi>): RecyclerView.A
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ResultadoApiViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_resultado_evento, parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_api_resultado_evento, parent,false)
         return ResultadoApiViewHolder(view)
     }
 
