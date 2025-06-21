@@ -44,12 +44,12 @@ class MainActivityPrincipal : AppCompatActivity() {
 
 
         // Codigo Julio
-//        val buttonJulio = findViewById<Button>(R.id.buttonDesarrolloJulio)
-//
-//        buttonJulio.setOnClickListener {
-//            val intent = Intent(this, NuevoResultadoActivity::class.java)
-//            startActivity(intent)
-//        }
+       val buttonJulio = findViewById<Button>(R.id.buttonDesarrolloJulio)
+
+       buttonJulio.setOnClickListener {
+          val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+        }
         // Fin codigo Julio
-    }
+   }
 }
