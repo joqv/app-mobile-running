@@ -17,7 +17,7 @@
         <ImageView
             android:id="@+id/imageViewPrincipalWing"
             android:layout_width="245dp"
-            android:layout_height="418dp"
+            android:layout_height="315dp"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/pngwing" />
 
@@ -43,12 +43,28 @@
             android:text="Acceder" />
 
         <Button
-            android:id="@+id/buttonResultadoEventoDesarrollo"
+            android:id="@+id/buttonDesarrolloJose"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="10dp"
-            android:text="Resultados Eventos (Desarrollo)" />
+            android:text="Boton (Desarrollo Jose)" />
+
+        <Button
+            android:id="@+id/buttonDesarrolloOmar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:text="Boton (Desarrollo Omar)" />
+
+        <Button
+            android:id="@+id/buttonDesarrolloJulio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:text="Boton (Desarrollo Julio)" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

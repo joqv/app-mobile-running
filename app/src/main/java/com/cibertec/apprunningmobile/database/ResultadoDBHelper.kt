@@ -1,4 +1,4 @@
-package com.cibertec.apprunningmobile
+package com.cibertec.apprunningmobile.database
 
 import android.content.ContentValues
 import android.content.Context
@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import com.cibertec.apprunningmobile.models.Resultado
 
-class ResultadoDatabaseHelper(context: Context) :
+class ResultadoDBHelper(context: Context) :
     SQLiteOpenHelper(context, "resultados.db", null, 1) {
 
     override fun onCreate(db: SQLiteDatabase) {

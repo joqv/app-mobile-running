@@ -1,8 +1,11 @@
 package com.cibertec.apprunningmobile.models
 
-data class Resultado(
-    val nombre: String,
-    val distancia: Double,
-    val tiempo: Double,
-    val velocidad: Double
+data class ResultadoApi(
+    var idResultado: Int,
+    var atleta: AtletaApi,
+    var evento: EventoApi,
+    var categoria: CategoriaApi,
+    var tiempo: String,
+    var puesto: Int,
+    var dorsal: String
 )

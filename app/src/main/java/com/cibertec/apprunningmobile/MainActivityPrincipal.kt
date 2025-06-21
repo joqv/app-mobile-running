@@ -17,23 +17,39 @@ class MainActivityPrincipal : AppCompatActivity() {
         val imagenPrincipal = findViewById<ImageView>(R.id.imageViewPrincipalWing)
         imagenPrincipal.setImageResource(R.drawable.pngwing)
 
+
+
+
         // Inicio código Jose para desarrollo
-        val buttonAtletasRest = findViewById<Button>(R.id.buttonResultadoEventoDesarrollo)
+        val buttonAtletasRest = findViewById<Button>(R.id.buttonDesarrolloJose)
 
         buttonAtletasRest.setOnClickListener {
-            val intentAtletasRest = Intent(this, ActivityResultadosEventos::class.java)
+            val intentAtletasRest = Intent(this, ActivityApiResultadosEventos::class.java)
             startActivity(intentAtletasRest)
         }
         // Fin código Jose para desarrollo
 
-        // codigo Omar
-      //  val btnResultados = findViewById<Button>(R.id.buttonResultadoEventoDesarrollo)
-       // btnResultados.setOnClickListener {
-         //   val intent = Intent(this, NuevoResultadoActivity::class.java)
-         //   startActivity(intent)
-        //}
 
 
-        //fin codigo Omar
+        // Codigo Omar
+        val buttonOmar = findViewById<Button>(R.id.buttonDesarrolloOmar)
+
+        buttonOmar.setOnClickListener {
+            val intent = Intent(this, ActivityResultadosPersonal::class.java)
+            startActivity(intent)
+        }
+        // Fin codigo Omar
+
+
+
+
+        // Codigo Julio
+//        val buttonJulio = findViewById<Button>(R.id.buttonDesarrolloJulio)
+//
+//        buttonJulio.setOnClickListener {
+//            val intent = Intent(this, NuevoResultadoActivity::class.java)
+//            startActivity(intent)
+//        }
+        // Fin codigo Julio
     }
 }

@@ -8,17 +8,18 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.cibertec.apprunningmobile.R.id.btnNuevo
-import com.cibertec.apprunningmobile.adapter.ResultadoApiAdapter
+import com.cibertec.apprunningmobile.adapter.ResultadoAdapter
+import com.cibertec.apprunningmobile.database.ResultadoDBHelper
 
-class ActivityResultadosEventos : AppCompatActivity() {
+class ActivityResultadosPersonal : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
-    private lateinit var resultadoApiAdapter: ResultadoApiAdapter
+    private lateinit var resultadoApiAdapter: ResultadoAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_resultados_eventos)
+        setContentView(R.layout.activity_resultados_personal)
 
         val btnNuevo1 = findViewById<Button>(btnNuevo)
         btnNuevo1.setOnClickListener {
@@ -29,10 +30,10 @@ class ActivityResultadosEventos : AppCompatActivity() {
         recyclerView = findViewById(R.id.RecyclerViewResultadosEventos)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        val dbHelper = ResultadoDatabaseHelper(this)
+        val dbHelper = ResultadoDBHelper(this)
         val listaDeResultados = dbHelper.obtenerTodosLosResultados()
 
-        resultadoApiAdapter = ResultadoApiAdapter(listaDeResultados)
+        resultadoApiAdapter = ResultadoAdapter(listaDeResultados)
         recyclerView.adapter = resultadoApiAdapter
 
     }

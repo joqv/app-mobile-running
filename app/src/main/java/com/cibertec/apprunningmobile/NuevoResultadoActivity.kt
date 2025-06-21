@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.cibertec.apprunningmobile.database.ResultadoDBHelper
 import com.cibertec.apprunningmobile.models.Resultado
 
 
@@ -53,7 +54,7 @@ class NuevoResultadoActivity : AppCompatActivity() {
 
             if (!nombre.isNullOrEmpty() && distancia != null && tiempo != null && velocidad != null) {
                 val resultado = Resultado(nombre, distancia, tiempo, velocidad)
-                val dbHelper = ResultadoDatabaseHelper(this)
+                val dbHelper = ResultadoDBHelper(this)
                 dbHelper.insertarResultado(resultado)
 
                 Toast.makeText(this, "Resultado guardado exitosamente", Toast.LENGTH_SHORT).show()
@@ -67,7 +68,7 @@ class NuevoResultadoActivity : AppCompatActivity() {
         val buttonAtletasRes = findViewById<Button>(R.id.btnVolverListaResultado)
 
         buttonAtletasRes.setOnClickListener {
-            val intentAtletasRes = Intent(this, ActivityResultadosEventos::class.java)
+            val intentAtletasRes = Intent(this, ActivityResultadosPersonal::class.java)
             startActivity(intentAtletasRes)
         }
     }
