@@ -1,4 +1,4 @@
-package com.cibertec.apprunningmobile
+package com.cibertec.apprunningmobile.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.cibertec.apprunningmobile.R
 import com.cibertec.apprunningmobile.database.ResultadoDBHelper
 import com.cibertec.apprunningmobile.models.Resultado
 

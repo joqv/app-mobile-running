@@ -1,4 +1,4 @@
-package com.cibertec.apprunningmobile
+package com.cibertec.apprunningmobile.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.cibertec.apprunningmobile.R
 import com.cibertec.apprunningmobile.R.id.btnNuevo
 import com.cibertec.apprunningmobile.adapter.ResultadoAdapter
 import com.cibertec.apprunningmobile.database.ResultadoDBHelper

@@ -16,7 +16,7 @@ class ResultadoApiAdapter(private val lista: List<ResultadoApi>): RecyclerView.A
         val apellido: TextView = itemView.findViewById(R.id.textViewApellidoApi)
         val dorsal: TextView = itemView.findViewById(R.id.textViewDorsalApi)
         val pais: TextView = itemView.findViewById(R.id.textViewPaisApi)
-        val edad: TextView = itemView.findViewById(R.id.textViewPaisApi)
+        val edad: TextView = itemView.findViewById(R.id.textViewEdadApi)
         val puesto: TextView = itemView.findViewById(R.id.textViewNumeroPuestoApi)
         val tiempo: TextView = itemView.findViewById(R.id.textViewTiempoApi)
     }
@@ -28,13 +28,13 @@ class ResultadoApiAdapter(private val lista: List<ResultadoApi>): RecyclerView.A
 
     override fun onBindViewHolder(holder: ResultadoApiViewHolder, position: Int) {
         val resultadoApi = lista[position]
-        holder.nombre.text = resultadoApi.atleta.nombre
-        holder.apellido.text = resultadoApi.atleta.apellido
-        holder.dorsal.text = resultadoApi.dorsal
-        holder.pais.text = resultadoApi.atleta.pais.nombrePais
-        holder.edad.text = resultadoApi.atleta.edad.toString()
-        holder.puesto.text = resultadoApi.puesto.toString()
-        holder.tiempo.text = resultadoApi.tiempo
+        holder.nombre.text = resultadoApi.atleta?.nombre ?:"N/A"
+        holder.apellido.text = resultadoApi.atleta?.apellido ?: "N/A"
+        holder.dorsal.text = resultadoApi.dorsal ?: "N/A"
+        holder.pais.text = resultadoApi.atleta?.pais?.nombrePais ?: "N/A"
+        holder.edad.text = resultadoApi.atleta?.edad?.toString() ?: "N/A"
+        holder.puesto.text = resultadoApi.puesto?.toString() ?: "N/A"
+        holder.tiempo.text = resultadoApi.tiempo ?: "N/A"
     }
 
     override fun getItemCount(): Int = lista.size
