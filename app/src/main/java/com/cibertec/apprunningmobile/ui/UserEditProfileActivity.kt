@@ -1,4 +1,4 @@
-package com.cibertec.apprunningmobile // Ajusta este paquete
+package com.cibertec.apprunningmobile.ui // Ajusta este paquete
 
 import android.app.DatePickerDialog
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.cibertec.apprunningmobile.R
 import com.cibertec.apprunningmobile.database.UsuarioDBHelper
 import com.cibertec.apprunningmobile.models.Usuario
 import java.util.Calendar

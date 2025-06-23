@@ -1,4 +1,4 @@
-package com.cibertec.apprunningmobile // Asegúrate de que tu paquete sea correcto
+package com.cibertec.apprunningmobile.ui // Asegúrate de que tu paquete sea correcto
 
 import android.os.Bundle
 
@@ -6,6 +6,7 @@ import android.widget.ListView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.cibertec.apprunningmobile.R
 import com.cibertec.apprunningmobile.database.UsuarioDBHelper
 import com.cibertec.apprunningmobile.models.Usuario
 import com.cibertec.apprunningmobile.adapter.UserAdapter

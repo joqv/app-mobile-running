@@ -8,6 +8,7 @@ import android.content.Intent
 import android.widget.ImageView
 import com.cibertec.apprunningmobile.ui.ActivityApiResultadosEventos
 import com.cibertec.apprunningmobile.ui.ActivityResultadosPersonal
+import com.cibertec.apprunningmobile.ui.LoginActivity
 
 class MainActivityPrincipal : AppCompatActivity() {
 
