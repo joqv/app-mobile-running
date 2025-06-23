@@ -6,6 +6,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
 import android.widget.ImageView
+import com.cibertec.apprunningmobile.ui.ActivityApiResultadosEventos
+import com.cibertec.apprunningmobile.ui.ActivityResultadosPersonal
 
 class MainActivityPrincipal : AppCompatActivity() {
 

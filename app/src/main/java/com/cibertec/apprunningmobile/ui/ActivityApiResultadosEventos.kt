@@ -1,0 +1,51 @@
+package com.cibertec.apprunningmobile.ui
+
+import android.os.Bundle
+import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.cibertec.apprunningmobile.R
+import com.cibertec.apprunningmobile.adapter.ResultadoApiAdapter
+import com.cibertec.apprunningmobile.models.ResultadoApi
+import com.cibertec.apprunningmobile.network.ResultadoApiService
+import com.cibertec.apprunningmobile.network.RunningRetrofitClient
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+
+class ActivityApiResultadosEventos : AppCompatActivity() {
+
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var resultadoApiAdapter: ResultadoApiAdapter
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_api_resultados_eventos)
+
+        RunningRetrofitClient.instance.getResultadosApi().enqueue(object : Callback<List<ResultadoApi>> {
+            override fun onResponse(
+                call: Call<List<ResultadoApi>>,
+                response: Response<List<ResultadoApi>>
+            ) {
+                if (response.isSuccessful) {
+                    val resultados = response.body()
+                    print("resultados: "+ resultados)
+                    resultados?.let {
+
+                        recyclerView = findViewById(R.id.reciclerViewResultadosEventos)
+                        recyclerView.layoutManager = LinearLayoutManager(this@ActivityApiResultadosEventos)
+                        resultadoApiAdapter = ResultadoApiAdapter(resultados)
+                        recyclerView.adapter = resultadoApiAdapter
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<List<ResultadoApi>>, t: Throwable) {
+                Toast.makeText(this@ActivityApiResultadosEventos, "Error al obtener datos.", Toast.LENGTH_SHORT).show()
+            }
+        })
+    }
+}
