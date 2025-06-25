@@ -15,6 +15,12 @@
         android:theme="@style/Theme.AppRunningMobile"
         tools:targetApi="31">
         <activity
+            android:name=".ui.ActivityHome"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ActivityApiEventosLista"
+            android:exported="false" />
+        <activity
             android:name=".ui.UserEditProfileActivity"
             android:exported="false" />
         <activity

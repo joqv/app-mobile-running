@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
 import android.widget.ImageView
 import com.cibertec.apprunningmobile.ui.ActivityApiResultadosEventos
+import com.cibertec.apprunningmobile.ui.ActivityHome
 import com.cibertec.apprunningmobile.ui.ActivityResultadosPersonal
 import com.cibertec.apprunningmobile.ui.LoginActivity
 
@@ -16,18 +17,12 @@ class MainActivityPrincipal : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main_principal)
-
-        val imagenPrincipal = findViewById<ImageView>(R.id.imageViewPrincipalWing)
-        imagenPrincipal.setImageResource(R.drawable.pngwing)
-
-
-
-
+        
         // Inicio código Jose para desarrollo
         val buttonAtletasRest = findViewById<Button>(R.id.buttonDesarrolloJose)
 
         buttonAtletasRest.setOnClickListener {
-            val intentAtletasRest = Intent(this, ActivityApiResultadosEventos::class.java)
+            val intentAtletasRest = Intent(this, ActivityHome::class.java)
             startActivity(intentAtletasRest)
         }
         // Fin código Jose para desarrollo
