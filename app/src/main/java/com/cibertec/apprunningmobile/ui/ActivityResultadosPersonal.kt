@@ -37,8 +37,24 @@ class ActivityResultadosPersonal : AppCompatActivity() {
         resultadoApiAdapter = ResultadoAdapter(listaDeResultados)
         recyclerView.adapter = resultadoApiAdapter
 
+        val buttonVolver = findViewById<Button>(R.id.buttonResultadosPersonalesVolver)
+
+        buttonVolver.setOnClickListener {
+            finish()
+        }
     }
 
+    override fun onResume() {
+        super.onResume()
 
+        recyclerView = findViewById(R.id.RecyclerViewResultadosEventos)
+        recyclerView.layoutManager = LinearLayoutManager(this)
 
+        val dbHelper = ResultadoDBHelper(this)
+        val listaDeResultados = dbHelper.obtenerTodosLosResultados()
+
+        resultadoApiAdapter = ResultadoAdapter(listaDeResultados)
+        recyclerView.adapter = resultadoApiAdapter
+
+    }
 }

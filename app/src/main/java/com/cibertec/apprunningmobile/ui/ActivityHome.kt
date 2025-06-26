@@ -38,10 +38,23 @@ class ActivityHome : AppCompatActivity() {
         actualizarDataResultadosPersonales()
 
         val buttonMaratonesEventos: LinearLayout = findViewById(R.id.linearLayoutMaratonesEventosButton)
+        val buttonResultadosPersonales: LinearLayout = findViewById(R.id.linearLayoutResultadosPersonalesButton)
+        val buttonGestionarUsuarios: LinearLayout = findViewById(R.id.linearLayoutGestionarUsuarioButton)
+
 
         buttonMaratonesEventos.setOnClickListener {
-            val intentMaratonesEventos = Intent(this, ActivityApiResultadosEventos::class.java)
-            startActivity(intentMaratonesEventos)
+            val intentEventosLista = Intent(this, ActivityApiEventosLista::class.java)
+            startActivity(intentEventosLista)
+        }
+
+        buttonResultadosPersonales.setOnClickListener {
+            val intentResultadosPersonales = Intent(this, ActivityResultadosPersonal::class.java)
+            startActivity(intentResultadosPersonales)
+        }
+
+        buttonGestionarUsuarios.setOnClickListener {
+            val intentGestionarUsuarios = Intent(this, UserManagementActivity::class.java)
+            startActivity(intentGestionarUsuarios)
         }
     }
 

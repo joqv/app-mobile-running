@@ -1,6 +1,7 @@
 package com.cibertec.apprunningmobile.ui // Asegúrate de que tu paquete sea correcto
 
 import android.os.Bundle
+import android.widget.LinearLayout
 
 import android.widget.ListView
 import android.widget.Toast
@@ -34,6 +35,11 @@ class UserManagementActivity : AppCompatActivity() {
         lvUsuarios.setOnItemClickListener { _, _, position, _ ->
             val usuarioSeleccionado = listaUsuarios[position]
             mostrarDialogoEditarEliminarUsuario(usuarioSeleccionado)
+        }
+
+        val buttonAtrasGestionarUsuario: LinearLayout = findViewById(R.id.lineaLayoutGestionarUsuarioAtras)
+        buttonAtrasGestionarUsuario.setOnClickListener {
+            finish()
         }
     }
 

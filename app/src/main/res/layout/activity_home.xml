@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#1b1b21"
+        android:background="#030711"
         android:padding="16dp">
 
         <LinearLayout
@@ -88,18 +88,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:backgroundTint="#2d2d2d"
-                    app:contentPadding="8dp"
+                    android:backgroundTint="#1d283a"
+                    app:contentPadding="10dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="4dp"
-                    android:orientation="vertical"
-                    android:padding="8dp">
+                    android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/imageViewGestionarUsuarios"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/baseline_supervised_user_circle_24"/>
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/group"/>
                 </androidx.cardview.widget.CardView>
 
 
@@ -116,28 +115,30 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/linearLayoutResultadosPersonalesButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
+                android:layout_margin="3dp"
                 android:layout_weight="1"
-                android:layout_margin="3dp">
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:backgroundTint="#2d2d2d"
-                    app:contentPadding="8dp"
+                    android:backgroundTint="#1d283a"
+                    android:orientation="vertical"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="4dp"
-                    android:orientation="vertical"
-                    android:padding="8dp">
+                    app:contentPadding="10dp">
 
                     <ImageView
                         android:id="@+id/imageViewResultadosPersonales"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/outline_article_person_24"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/doc5"
                         app:cardCornerRadius="16dp" />
                 </androidx.cardview.widget.CardView>
 
@@ -166,18 +167,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:backgroundTint="#2d2d2d"
-                    app:contentPadding="8dp"
+                    android:backgroundTint="#1d283a"
+                    app:contentPadding="10dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="4dp"
-                    android:orientation="vertical"
-                    android:padding="8dp">
+                    android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/imageViewEntrenamientos"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/outline_bolt_24"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/dumbbell"
                         app:cardCornerRadius="16dp" />
                 </androidx.cardview.widget.CardView>
 
@@ -205,18 +205,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:backgroundTint="#2d2d2d"
-                    app:contentPadding="8dp"
+                    android:backgroundTint="#1d283a"
+                    app:contentPadding="10dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="4dp"
-                    android:orientation="vertical"
-                    android:padding="8dp">
+                    android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/imageViewAlimentacion"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/outline_brunch_dining_24"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/eat4"
                         app:cardCornerRadius="16dp" />
                 </androidx.cardview.widget.CardView>
 
@@ -252,18 +251,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:backgroundTint="#2d2d2d"
-                    app:contentPadding="8dp"
+                    android:backgroundTint="#1d283a"
+                    app:contentPadding="10dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="4dp"
-                    android:orientation="vertical"
-                    android:padding="8dp">
+                    android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/imageViewAdd1"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/outline_bring_your_own_ip_24"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/medalla3"
                         app:cardCornerRadius="16dp" />
                 </androidx.cardview.widget.CardView>
 
@@ -291,18 +289,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:backgroundTint="#2d2d2d"
-                    app:contentPadding="8dp"
+                    android:backgroundTint="#1d283a"
+                    app:contentPadding="10dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="4dp"
-                    android:orientation="vertical"
-                    android:padding="8dp">
+                    android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/imageViewAdd2"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/outline_cases_24"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/store2"
                         app:cardCornerRadius="16dp" />
                 </androidx.cardview.widget.CardView>
 
@@ -343,13 +340,13 @@
             android:layout_width="match_parent"
             app:cardCornerRadius="16dp"
             android:layout_gravity="center_horizontal"
-            android:backgroundTint="#272727"
+            android:backgroundTint="#1d283a"
             android:layout_marginTop="20dp">
 
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="210dp"
                 android:orientation="vertical"
                 android:padding="16dp">
 
@@ -365,13 +362,13 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:layout_marginBottom="6dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical">
 
@@ -386,7 +383,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical">
 
@@ -401,14 +398,14 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/textViewRitmo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:fontFamily="@font/inter_tight_medium"
                             android:text="Ritmo"
                             android:textColor="#E2DEDE" />
@@ -416,7 +413,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical">
 

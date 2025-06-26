@@ -69,8 +69,7 @@ class NuevoResultadoActivity : AppCompatActivity() {
         val buttonAtletasRes = findViewById<Button>(R.id.btnVolverListaResultado)
 
         buttonAtletasRes.setOnClickListener {
-            val intentAtletasRes = Intent(this, ActivityResultadosPersonal::class.java)
-            startActivity(intentAtletasRes)
+            finish()
         }
     }
 }

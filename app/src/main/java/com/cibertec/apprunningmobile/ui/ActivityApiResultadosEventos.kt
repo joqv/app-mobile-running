@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.ProgressBar
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -22,7 +23,6 @@ class ActivityApiResultadosEventos : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var resultadoApiAdapter: ResultadoApiAdapter
-
     private lateinit var progressBarApiResultado: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,23 +31,27 @@ class ActivityApiResultadosEventos : AppCompatActivity() {
         setContentView(R.layout.activity_api_resultados_eventos)
 
         val buttonAtrasMaratonesEventos: LinearLayout = findViewById(R.id.linearLayoutAtrasMaratonesEventosButton)
+        val eventoId = intent.getIntExtra("idEvento", 0)
+        val tituloEvento = findViewById<TextView>(R.id.textViewTituloEvento)
+        val nombreEvento = intent.getStringExtra("nombreEvento")
+
+        tituloEvento.setText(nombreEvento)
+
         recyclerView = findViewById(R.id.reciclerViewResultadosEventos)
-        progressBarApiResultado = findViewById(R.id.progressBarApiResultados)
-
-        progressBarApiResultado.visibility = View.VISIBLE
         recyclerView.visibility = View.GONE
+        progressBarApiResultado = findViewById(R.id.progressBarApiResultados)
+        progressBarApiResultado.visibility = View.VISIBLE
 
-        RunningRetrofitClient.instance.getResultadosApi().enqueue(object : Callback<List<ResultadoApi>> {
+        RunningRetrofitClient.instance.getResultadosEventosApi(eventoId).enqueue(object : Callback<List<ResultadoApi>> {
             override fun onResponse(
                 call: Call<List<ResultadoApi>>,
                 response: Response<List<ResultadoApi>>
             ) {
-
                 progressBarApiResultado.visibility = View.GONE
 
                 if (response.isSuccessful) {
                     val resultados = response.body()
-                    print("resultados: "+ resultados)
+                    print("--resultados: "+ resultados)
                     resultados?.let {
 
                         recyclerView.layoutManager = LinearLayoutManager(this@ActivityApiResultadosEventos)

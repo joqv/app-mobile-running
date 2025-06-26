@@ -1,6 +1,6 @@
 package com.cibertec.apprunningmobile.models
 
 data class EventoApi(
-    var idEVento: Int,
+    var idEvento: Int,
     var nombreEvento: String
 )
