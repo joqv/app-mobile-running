@@ -13,6 +13,11 @@ import com.cibertec.apprunningmobile.ui.LoginActivity
 
 class MainActivityPrincipal : AppCompatActivity() {
 
+
+    // Declara el NUEVO botón del clima
+    private lateinit var btnWeather: Button
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -47,7 +52,19 @@ class MainActivityPrincipal : AppCompatActivity() {
        buttonJulio.setOnClickListener {
           val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
-        }
+       }
         // Fin codigo Julio
+
+
+        //inicio codigo Gonzalo
+            btnWeather = findViewById(R.id.btnWeather) // Inicializa el botón del clima
+
+            // Configura el click listener para el NUEVO botón de Clima
+            // cuando se presiona "Clima para Corredores", navegamos a WeatherDisplayActivity
+            btnWeather.setOnClickListener {
+                val intent = Intent(this, WeatherDisplayActivity::class.java)
+                startActivity(intent)
+            }
+        //fin codigo Gonzalo
    }
 }
