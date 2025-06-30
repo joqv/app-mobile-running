@@ -5,14 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="10dp"
+    app:cardCornerRadius="12dp"
     android:layout_marginHorizontal="8dp"
-    android:layout_marginVertical="2dp"
+    android:layout_marginVertical="4dp"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    android:backgroundTint="#2d2d39">
+    android:backgroundTint="#1d283a">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_weight="4">
+            android:layout_weight="1">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -38,20 +38,20 @@
                     android:id="@+id/textViewNombreApi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
                     android:text="Nombre"
                     android:textColor="#03A9F4"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
+                    android:textSize="22sp" />
 
                 <TextView
                     android:id="@+id/textViewApellidoApi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
                     android:paddingLeft="8dp"
                     android:text="Apellido"
                     android:textColor="#2196F3"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
+                    android:textSize="22sp" />
 
             </LinearLayout>
 
@@ -65,8 +65,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/poppins_medium"
                     android:text="M001"
-                    android:textColor="#DE959595" />
+                    android:textColor="#DEE2E2E2" />
 
                 <TextView
                     android:id="@+id/separador1"
@@ -80,8 +81,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/poppins_medium"
                     android:text="México"
-                    android:textColor="#999797" />
+                    android:textColor="#DEE2E2E2" />
 
                 <TextView
                     android:id="@+id/separador2"
@@ -95,8 +97,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/poppins_medium"
                     android:text="25"
-                    android:textColor="#DE949494" />
+                    android:textColor="#DEE2E2E2" />
             </LinearLayout>
 
         </LinearLayout>
@@ -104,51 +107,58 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1">
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/labelPuestoApi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="4dp"
+                android:fontFamily="@font/poppins"
                 android:text="Puesto"
                 android:textAlignment="center"
-                android:textSize="12sp"
+                android:textColor="#DEE2E2E2"
+                android:textSize="11sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textViewNumeroPuestoApi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
                 android:text="1"
                 android:textAlignment="center"
-                android:textSize="16sp" />
+                android:textColor="#DEE2E2E2"
+                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_weight="1">
+            android:layout_marginStart="20dp">
 
             <TextView
                 android:id="@+id/labelTiempoApi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="4dp"
+                android:fontFamily="@font/poppins"
                 android:text="Tiempo"
                 android:textAlignment="center"
-                android:textSize="12sp"
+                android:textColor="#DEE2E2E2"
+                android:textSize="11sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textViewTiempoApi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
                 android:text="02:30:20"
                 android:textAlignment="center"
-                android:textSize="16sp" />
+                android:textColor="#DEE2E2E2"
+                android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

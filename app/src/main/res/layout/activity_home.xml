@@ -261,7 +261,7 @@
                         android:id="@+id/imageViewAdd1"
                         android:layout_width="35dp"
                         android:layout_height="35dp"
-                        android:src="@drawable/medalla3"
+                        android:src="@drawable/finish2"
                         app:cardCornerRadius="16dp" />
                 </androidx.cardview.widget.CardView>
 
@@ -273,6 +273,45 @@
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/inter_tight"
                     android:text="Maratones\ny Eventos"
+                    android:textAlignment="center"
+                    android:textColor="#F2F1F1"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutClimaButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:backgroundTint="#1d283a"
+                    android:orientation="vertical"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:contentPadding="10dp">
+
+                    <ImageView
+                        android:id="@+id/imageViewAdd3"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/clima"
+                        app:cardCornerRadius="16dp" />
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/textViewAdd3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/inter_tight"
+                    android:text="Clima\n"
                     android:textAlignment="center"
                     android:textColor="#F2F1F1"
                     android:textSize="13sp" />
@@ -321,17 +360,39 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_weight="4"
-                android:layout_margin="3dp">
+                android:layout_weight="1"
+                android:layout_margin="3dp"
+                android:visibility="invisible">
 
-            </LinearLayout>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:backgroundTint="#1d283a"
+                    app:contentPadding="10dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="4"
-                android:layout_margin="3dp">
+                    <ImageView
+                        android:id="@+id/imageViewAdd4"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/store2"
+                        app:cardCornerRadius="16dp" />
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/textViewAdd4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/inter_tight"
+                    android:text="Tienda\ndeportiva"
+                    android:textAlignment="center"
+                    android:textColor="#F2F1F1"
+                    android:textSize="13sp" />
             </LinearLayout>
         </LinearLayout>
 

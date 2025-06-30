@@ -7,12 +7,16 @@ object RunningRetrofitClient {
 
     private const val BASE_URL = "https://runningapp.joseqv.com/api/"
 
-    val instance: ResultadoApiService by lazy {
-        val retrofit = Retrofit.Builder()
-            .baseUrl(BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
+    val retrofit = Retrofit.Builder()
+        .baseUrl(BASE_URL)
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
 
+    val resultadoApiService: ResultadoApiService by lazy {
         retrofit.create(ResultadoApiService::class.java)
+    }
+
+    val eventoApiService: EventoApiService by lazy {
+        retrofit.create(EventoApiService::class.java)
     }
 }
