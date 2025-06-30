@@ -58,7 +58,7 @@
                 android:textSize="22sp" />
 
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/textViewTituloNombreHome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/inter_tight"
@@ -245,6 +245,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
                 android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
                 android:orientation="vertical">
 
                 <androidx.cardview.widget.CardView
@@ -284,6 +286,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
                 android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
                 android:orientation="vertical">
 
                 <androidx.cardview.widget.CardView

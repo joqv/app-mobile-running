@@ -42,7 +42,8 @@ class LoginActivity : AppCompatActivity() {
                 if (usuarioAutenticado != null) {
                     Toast.makeText(this, "¡Bienvenido, ${usuarioAutenticado.nombre}!", Toast.LENGTH_SHORT).show()
                     // Si el login es exitoso, navega a la actividad principal
-                    val intent = Intent(this, UserManagementActivity::class.java) // <--- Asegúrate que MainActivityPrincipal sea el nombre de tu actividad principal
+                    val intent = Intent(this, ActivityHome::class.java) // <--- Asegúrate que MainActivityPrincipal sea el nombre de tu actividad principal
+                    intent.putExtra("EMAIL_USUARIO", usuarioAutenticado.email)
                     startActivity(intent)
                     finish() // Finaliza LoginActivity para que el usuario no pueda volver con el botón atrás
                 } else {
