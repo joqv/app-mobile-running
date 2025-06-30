@@ -3,8 +3,11 @@ package com.cibertec.apprunningmobile.ui
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.ProgressBar
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -25,6 +28,9 @@ class ActivityApiEventosLista : AppCompatActivity(), EventoApiAdapter.OnItemClic
     private lateinit var recyclerView: RecyclerView
     private lateinit var eventoApiAdapter: EventoApiAdapter
     private lateinit var progressBar: ProgressBar
+    private lateinit var sinResultados: TextView
+    private lateinit var contadorEventos: TextView
+    private lateinit var labelContadorEventos: TextView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,14 +44,44 @@ class ActivityApiEventosLista : AppCompatActivity(), EventoApiAdapter.OnItemClic
         }
 
         val buttonAtrasEventos: LinearLayout = findViewById(R.id.linearLayoutAtrasEventosApiButton)
+        val consultaBusquedaEvento: EditText = findViewById(R.id.editTextBuscadorEventos)
+        val buttonBuscarEventoNombre: ImageButton = findViewById(R.id.imageButtonBuscarEventoNombre)
 
+
+        var nombre: String = consultaBusquedaEvento.text.toString()
+
+        sinResultados = findViewById(R.id.textViewNoHayResultadosEventos)
         recyclerView = findViewById(R.id.reciclerViewEventosApiLista)
         progressBar = findViewById(R.id.progressBarEventosApiLista)
+        contadorEventos = findViewById(R.id.textViewContadorEventos)
+        labelContadorEventos = findViewById(R.id.labelContadorEventos)
 
         progressBar.visibility = View.VISIBLE
         recyclerView.visibility  = View.GONE
+        sinResultados.visibility = View.GONE
+        contadorEventos.visibility = View.GONE
+        labelContadorEventos.visibility = View.GONE
 
-        RunningRetrofitClient.instance.getEventosApi().enqueue(object : Callback<List<EventoApi>> {
+        obtenerDatosEventos(nombre)
+
+        buttonAtrasEventos.setOnClickListener {
+            finish()
+        }
+
+        buttonBuscarEventoNombre.setOnClickListener {
+            progressBar.visibility = View.VISIBLE
+            recyclerView.visibility  = View.GONE
+            sinResultados.visibility = View.GONE
+            contadorEventos.visibility = View.GONE
+            labelContadorEventos.visibility = View.GONE
+            nombre = consultaBusquedaEvento.text.toString()
+            obtenerDatosEventos(nombre)
+        }
+    }
+
+    private fun obtenerDatosEventos(consulta: String) {
+
+        RunningRetrofitClient.eventoApiService.getEventosApiPorNombre(consulta).enqueue(object : Callback<List<EventoApi>> {
 
             override fun onResponse(
                 call: Call<List<EventoApi>>,
@@ -53,17 +89,27 @@ class ActivityApiEventosLista : AppCompatActivity(), EventoApiAdapter.OnItemClic
             ) {
                 progressBar.visibility = View.GONE
 
-                if(response.isSuccessful) {
+                if (response.isSuccessful) {
+
                     val eventos = response.body()
                     print("eventos: "+ eventos)
                     eventos?.let {
 
-                        recyclerView.layoutManager = LinearLayoutManager(this@ActivityApiEventosLista)
-                        eventoApiAdapter = EventoApiAdapter(eventos, this@ActivityApiEventosLista)
-                        recyclerView.adapter = eventoApiAdapter
-                        recyclerView.visibility = View.VISIBLE
-
+                        if (it.isEmpty()) {
+                            sinResultados.visibility = View.VISIBLE
+                            recyclerView.visibility = View.GONE
+                        } else {
+                            recyclerView.layoutManager = LinearLayoutManager(this@ActivityApiEventosLista)
+                            eventoApiAdapter = EventoApiAdapter(eventos, this@ActivityApiEventosLista)
+                            recyclerView.adapter = eventoApiAdapter
+                            contadorEventos.text = eventos.size.toString()
+                            contadorEventos.visibility = View.VISIBLE
+                            labelContadorEventos.visibility = View.VISIBLE
+                            recyclerView.visibility = View.VISIBLE
+                            sinResultados.visibility = View.GONE
+                        }
                     }
+
                 } else {
                     Toast.makeText(this@ActivityApiEventosLista, "Error al obtener datos: " + response.code(), Toast.LENGTH_SHORT).show()
                     recyclerView.visibility = View.VISIBLE
@@ -74,10 +120,6 @@ class ActivityApiEventosLista : AppCompatActivity(), EventoApiAdapter.OnItemClic
                 Toast.makeText(this@ActivityApiEventosLista, "Error al obtener datos: ", Toast.LENGTH_SHORT).show()
             }
         })
-
-        buttonAtrasEventos.setOnClickListener {
-            finish()
-        }
     }
 
     override fun onItemClick(item: EventoApi) {

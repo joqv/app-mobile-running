@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="8dp"
-    android:layout_marginVertical="2dp"
-    android:backgroundTint="#2d2d39"
-    app:cardCornerRadius="10dp"
+    android:layout_marginVertical="4dp"
+    android:backgroundTint="#1d283a"
+    app:cardCornerRadius="12dp"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
@@ -37,10 +37,10 @@
                     android:id="@+id/textViewNombreEventoApiLista"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
                     android:text="Nombre"
-                    android:textColor="#8BC34A"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
+                    android:textColor="#FFEB3B"
+                    android:textSize="22sp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

@@ -22,49 +22,12 @@ class MainActivityPrincipal : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main_principal)
-        
-        // Inicio código Jose para desarrollo
-        val buttonAtletasRest = findViewById<Button>(R.id.buttonDesarrolloJose)
 
-        buttonAtletasRest.setOnClickListener {
-            val intentAtletasRest = Intent(this, ActivityHome::class.java)
-            startActivity(intentAtletasRest)
-        }
-        // Fin código Jose para desarrollo
+        val buttonAccederPrincipal = findViewById<Button>(R.id.buttonAccederPrincipal)
 
-
-
-        // Codigo Omar
-        val buttonOmar = findViewById<Button>(R.id.buttonDesarrolloOmar)
-
-        buttonOmar.setOnClickListener {
-            val intent = Intent(this, ActivityResultadosPersonal::class.java)
+        buttonAccederPrincipal.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
-        // Fin codigo Omar
-
-
-
-
-        // Codigo Julio
-       val buttonJulio = findViewById<Button>(R.id.buttonDesarrolloJulio)
-
-       buttonJulio.setOnClickListener {
-          val intent = Intent(this, LoginActivity::class.java)
-        startActivity(intent)
-       }
-        // Fin codigo Julio
-
-
-        //inicio codigo Gonzalo
-            btnWeather = findViewById(R.id.btnWeather) // Inicializa el botón del clima
-
-            // Configura el click listener para el NUEVO botón de Clima
-            // cuando se presiona "Clima para Corredores", navegamos a WeatherDisplayActivity
-            btnWeather.setOnClickListener {
-                val intent = Intent(this, WeatherDisplayActivity::class.java)
-                startActivity(intent)
-            }
-        //fin codigo Gonzalo
    }
 }

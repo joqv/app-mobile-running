@@ -5,6 +5,7 @@ import com.cibertec.apprunningmobile.models.ResultadoApi
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface ResultadoApiService {
 
@@ -12,8 +13,5 @@ interface ResultadoApiService {
     fun getResultadosApi(): Call<List<ResultadoApi>>
 
     @GET("resultados/eventos/{id}")
-    fun getResultadosEventosApi(@Path("id") id: Int): Call<List<ResultadoApi>>
-
-    @GET("eventos")
-    fun getEventosApi(): Call<List<EventoApi>>
+    fun getResultadosEventosApi(@Path("id") id: Int, @Query("n") n: String): Call<List<ResultadoApi>>
 }
